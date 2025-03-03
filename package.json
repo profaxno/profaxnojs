@@ -1,6 +1,6 @@
 {
   "name": "profaxnojs",
-  "version": "1.0.39",
+  "version": "1.0.40",
   "description": "",
   "author": "",
   "private": false,
@@ -18,10 +18,9 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "clean-npm": "if exist temp rmdir /S /Q temp",
-    "prepare-npm": "mkdir temp && xcopy dist\\* temp\\ /E /I /Y && copy package.json temp\\ && copy README.md temp\\",
-    "publish-npm": "cd temp && npm publish",
-    "release-npm": "npm run clean-npm && npm run build && npm run prepare-npm && npm run publish-npm"
+    "delete-lib": "if exist temp rmdir /S /Q temp",
+    "build-lib": "npm install && npm run build && npm run delete-lib && mkdir temp && xcopy dist\\* temp\\ /E /I /Y && copy package.json temp\\ && copy README.md temp\\",
+    "publish-lib": "cd temp && npm publish"
   },
   "dependencies": {
     "@nestjs/axios": "^4.0.0",

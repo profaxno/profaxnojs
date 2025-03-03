@@ -13,4 +13,9 @@ export class SearchPaginationDto{
     @Min(1)
     @Type(() => Number)
     limit?: number;
+
+    constructor(page?: number, limit?: number) {
+        this.page = page;
+        this.limit = limit;
+    }
 }
