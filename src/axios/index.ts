@@ -1,3 +1,4 @@
 export * from './pfx-http.module';
 export * from './pfx-http.service';
-export * from './enum';
+export * from './dto';
+export * from './enums';

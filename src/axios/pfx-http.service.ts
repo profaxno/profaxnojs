@@ -5,7 +5,7 @@ import { Injectable, Logger } from "@nestjs/common";
 import { ConfigService } from "@nestjs/config";
 import { HttpService } from "@nestjs/axios";
 
-import { PfxHttpMethodEnum } from "./enum/pfx-http-method.enum";
+import { PfxHttpMethodEnum } from "./enums/pfx-http-method.enum";
 
 @Injectable()
 export class PfxHttpService {
