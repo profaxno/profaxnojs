@@ -10,8 +10,14 @@ export class SearchInputDto{
     @IsString({ each: true })
     searchList?: string[];
 
-    constructor(search?: string, searchList?: string[]){
+    @IsOptional()
+    @IsArray()
+    @IsString({ each: true })
+    idList?: string[];
+
+    constructor(search?: string, searchList?: string[], idList?: string[]){
         this.search = search;
         this.searchList = searchList;
+        this.idList = idList;
     }
 }
